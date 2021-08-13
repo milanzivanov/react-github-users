@@ -1,8 +1,12 @@
-const Form = () => {
+import {useState} from "react";
+
+const Form = (props) => {
+
+    const [username, setUsername] = useState("")
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        alert("test")
+        alert(username)
     }
     
     return ( 
@@ -11,6 +15,8 @@ const Form = () => {
             className="w-full max-w-sm mx-auto">
             <div className="mt-10 flex">
             <input
+                value={username}
+                onChange={(event) => setUsername(event.target.value)}
                 type="text"
                 placeholder="GitHub username"
                 className="form-input block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150"
