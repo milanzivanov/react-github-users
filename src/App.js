@@ -8,7 +8,7 @@ function App() {
         Search a GitHub User
       </h1>
 
-      <Form />
+      <Form></Form>
     </div>
   );
 }

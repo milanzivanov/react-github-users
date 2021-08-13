@@ -1,6 +1,14 @@
 const Form = () => {
+
+    const handleSubmit = (event) => {
+        event.preventDefault()
+        alert("test")
+    }
+    
     return ( 
-        <form className="w-full max-w-sm mx-auto">
+        <form 
+            onSubmit={handleSubmit} 
+            className="w-full max-w-sm mx-auto">
             <div className="mt-10 flex">
             <input
                 type="text"
