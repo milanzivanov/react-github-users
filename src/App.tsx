@@ -3,10 +3,22 @@ import './App.css';
 import Form from './components/Form';
 import CardList from './components/CardList';
 
-function App() {
-  const [cards, setCards] = useState([]);
+export type GitHubCard = {
+  avatar_url: string
+  name: string
+  login: string
+  public_repos: string
+  created_at: string
+  location: string
+  bio: string
+  html_url: string
+  blog: string
+};
 
-  const addNewCard = (card) => {
+function App() {
+  const [cards, setCards] = useState<GitHubCard[]>([]);
+
+  const addNewCard = (card: GitHubCard) => {
     setCards([...cards, card]);
   }
 
